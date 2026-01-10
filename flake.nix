@@ -53,7 +53,6 @@
           # Navigation
           vim-tmux-navigator 
           telescope-fzf-native-nvim
-          blink-cmp
           which-key-nvim
 
           # Version management
@@ -61,6 +60,8 @@
           lazygit-nvim
           
           # Language support 
+          blink-cmp
+          luasnip
           nvim-treesitter.withAllGrammars
           nvim-lspconfig
           
