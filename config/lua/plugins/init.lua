@@ -1,0 +1,8 @@
+require("plugins.lualine")
+require("plugins.bufferline")
+require("plugins.neo-tree")
+require("plugins.telescope")
+require("plugins.git")
+require("plugins.completions")
+require("plugins.treesitter")
+require("plugins.debug")
