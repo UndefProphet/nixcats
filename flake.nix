@@ -28,8 +28,10 @@
         ripgrep
 
         # LSP
-        nixd alejandra # Nix
-        lua-language-server stylua
+        nixd nil nixfmt alejandra       # Nix
+        lua-language-server stylua      # Lua
+        vscode-langservers-extracted    # HTML / CSS / JSON / ESLint
+        typescript-language-server      # Typescript
         ];
       };
 
@@ -37,6 +39,9 @@
       startupPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [ ];
         general = with pkgs.vimPlugins; [
+          # Utility
+          mini-bufremove
+
           # Appearence
           gruvbox-nvim 
           nvim-web-devicons
