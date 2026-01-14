@@ -9,7 +9,10 @@ local servers = {}
 servers.html = {}
 servers.jsonls = {}
 servers.cssls = {}
-servers.ts_ls= {}
+servers.ts_ls = {}
+
+-- Qt
+servers.qmlls = {}
 
 -- but you can provide some if you want to!
 servers.lua_ls = {
