@@ -1,5 +1,5 @@
--- GIT
-if not nixCats('general') then
+-- Git
+if not nixCats('git') then
   return
 end
 

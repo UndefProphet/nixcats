@@ -1,4 +1,4 @@
-if not nixCats('general') then
+if not nixCats('debug') then
   return
 end
 -- NOTE: Base debugging setup

@@ -23,7 +23,6 @@
       lspsAndRuntimeDeps = {
         general = with pkgs; [
         # Dependecies 
-        lazygit
         tree-sitter
         ripgrep
 
@@ -33,11 +32,15 @@
         vscode-langservers-extracted    # HTML / CSS / JSON / ESLint
         typescript-language-server      # Typescript
         ];
+
+        # Version management
+        git = with pkgs; [
+          lazygit
+        ];
       };
 
       # This is for plugins that will load at startup without using packadd:
       startupPlugins = {
-        gitPlugins = with pkgs.neovimPlugins; [ ];
         general = with pkgs.vimPlugins; [
           # Utility
           mini-bufremove
@@ -54,18 +57,26 @@
           vim-tmux-navigator 
           telescope-fzf-native-nvim
           which-key-nvim
-
-          # Version management
-          gitsigns-nvim
-          lazygit-nvim
           
           # Language support 
           blink-cmp
           luasnip
           nvim-treesitter.withAllGrammars
           nvim-lspconfig
-          
-          # Debugging
+        ];
+       
+        # Custom color scheme
+        base16Colors.enable = with pkgs.vimPlugins; [
+          mini-base16 
+        ];
+
+        # Version management
+        git = with pkgs.vimPlugins; [
+          gitsigns-nvim
+          lazygit-nvim
+        ];
+
+        debug = with pkgs.vimPlugins; [
           nvim-dap
           nvim-dap-ui
           nvim-dap-virtual-text
@@ -75,7 +86,6 @@
       # not loaded automatically at startup.
       # use with packadd and an autocommand in config to achieve lazy loading
       optionalPlugins = {
-        gitPlugins = with pkgs.neovimPlugins; [ ];
         general = with pkgs.vimPlugins; [
           lazydev-nvim # For lazy loading
         ];
@@ -151,17 +161,29 @@
         # (and other information to pass to lua)
         categories = {
           general = true;
-          gitPlugins = true;
+          git = true;
           customPlugins = true;
-          test = true;
-          example = {
-            youCan = "add more than just booleans";
-            toThisSet = [
-              "and the contents of this categories set"
-              "will be accessible to your lua with"
-              "nixCats('path.to.value')"
-              "see :help nixCats"
-            ];
+          debug = false;
+          base16Colors = {
+            enable = false;
+            palette = {
+              base00 = "";
+              base01 = "";
+              base02 = "";
+              base03 = "";
+              base04 = "";
+              base05 = "";
+              base06 = "";
+              base07 = "";
+              base08 = "";
+              base09 = "";
+              base0A = "";
+              base0B = "";
+              base0C = "";
+              base0D = "";
+              base0E = "";
+              base0F = "";
+            };
           };
         };
       };
