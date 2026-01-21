@@ -45,7 +45,7 @@
         general = with pkgs.vimPlugins; [
           # Utility
           mini-bufremove
-          mini-indentscope
+          snacks-nvim
 
           # Appearence
           gruvbox-nvim 
