@@ -53,3 +53,12 @@ opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
 opt.foldcolumn = "0"
+
+-- Diagnostics
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})

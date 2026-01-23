@@ -12,68 +12,8 @@ servers.cssls = {}
 servers.ts_ls = {}
 
 servers.qmlls = {} -- Qt
-servers.pylsp = {
-  settings = {
-    root_markers = {
-      "pyproject.toml",
-      "setup.py",
-      "setup.cfg",
-      "requirements.txt",
-      "Pipfile",
-      "pyrightconfig.json",
-      ".git",
-      "ruff.toml",
-    },
-    lsp = {
-      filetypes = { "python" },
-      settings = {
-        pylsp = {
-          signatue = {
-            formatter = "ruff",
-          },
-          plugins = {
-            ruff = {
-              enabled = true, -- Enable the plugin
-              cmd_env = { RUFF_TRACE = "messages" },
-              init_options = {
-                settings = {
-                  logLevel = "info",
-                  configurationPreference = "filesystemFirst",
-                  lint = {
-                    preview = true,
-                  },
-                  format = {
-                    preview = true,
-                  },
-                  configuration = {
-                    format = {
-                      ["quote-style"] = "single",
-                    },
-                  },
-                },
-              },
-              formatEnabled = true, -- Enable formatting using ruffs formatter
-              executable = "ruff", -- Custom path to ruff
-              preview = true, -- Whether to enable the preview style linting and formatting.
-              targetVersion = "py313", -- The minimum python version to target (applies for both linting and formatting).
-            },
-            rope_autoimport = { enabled = false },
-            pyflakes = { enabled = true },
-            flake8 = { enabled = false },
-            pylint = { enabled = false },
-            mccabe = { enabled = false },
-            autopep8 = { enabled = false },
-            jedi = { enabled = false },
-            preload = { enabled = false },
-            pycodestyle = { enabled = false },
-            yapf = { enabled = false },
-          },
-        },
-      },
-    },
-  },
-}
-servers.pyright = {};
+servers.pylsp = {}
+servers.pyright = {}
 
 -- but you can provide some if you want to!
 servers.lua_ls = {
