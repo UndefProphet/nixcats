@@ -22,7 +22,7 @@ opt.wrap = false
 opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
-opt.signcolumn = "yes"
+opt.signcolumn = "no"
 opt.fillchars = { eob = " ", }
 
 -- Show cmdline when entering command-line mode
