@@ -32,6 +32,7 @@
         vscode-langservers-extracted    # HTML / CSS / JSON / ESLint
         typescript-language-server      # Typescript
         python3Packages.python-lsp-server pyright # Python
+        kdePackages.qtdeclarative       # QT qmlls
         ];
 
         # Version management
